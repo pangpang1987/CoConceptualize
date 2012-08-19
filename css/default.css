@@ -1,0 +1,160 @@
+html {
+	font-size: 16px;
+}
+
+html, button, input, select, textarea { 
+	font-family: 'Source Sans Pro', sans-serif;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+::-moz-selection {
+	background: #fe57a1;
+	color: #fff;
+	text-shadow: none;
+}
+
+::selection {
+	background: #fe57a1;
+	color: #fff;
+	text-shadow: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+	display: block;
+}
+
+body {
+	background: #6188ad url(../images/bg.gif) repeat;
+	margin: 0 auto;
+	width: 60%;
+	font-size: 1em;
+	line-height: 1.4;
+	color: #2c2c2c;
+}
+
+header {
+	background: #b1d51f;
+	padding: 10px;
+	height: 40px;
+	margin-top: -5px;
+	border-radius: 8px;
+}
+
+#logo {
+	float: left;
+	width: 20%;
+	font-size: 32px;
+}
+
+ul#links {
+	float: right;
+	margin-top: 15px;
+}
+
+ul#links li {
+	display: inline;
+	margin-left: 10px;
+}
+
+ul#links li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+}
+
+ul#links li a:hover {
+	border-bottom: 1px dotted #2c2c2c;
+}
+
+#main {
+	margin-top: 70px;
+}
+
+#main p#intro {
+	font-size: 18px;
+	color: #828282;
+	text-align: center;
+	font-style: italic;
+}
+
+::-webkit-input-placeholder {
+   color: #bfbfbf;
+   text-transform: uppercase;
+}
+
+:-moz-placeholder {  
+   color: #bfbfbf;
+   text-transform: uppercase;
+}
+
+#login {
+	width: 400px;
+	height: 200px;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+}
+
+#login input {
+	width: 90%;
+	height: 50px;
+	font-size: 24px;
+	margin-top: 15px;
+	padding-left: 10px;
+	float: right;
+	color: #9a9a9a;
+	border: 0;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+
+#login input:focus {
+	background: #595959;
+	color: #bdd72f;
+}
+
+button {
+	float: right;
+	margin-top: 15px;
+}
+
+button#loginButton {
+	color: #000;
+	font-weight: bold;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 60%;
+	border-top: 1px solid #b1cb37;
+	color: #fff;
+}
+
+footer p {
+	float: left;
+}
+
+footer #bottom-links {
+	float: right;
+}
+
+footer #bottom-links li {
+	display: inline;
+	margin-left: 5px;
+}
+
+footer #bottom-links li a {
+	color: #b1cb37;
+}
+
+.clear {
+	clear: both;
+}
