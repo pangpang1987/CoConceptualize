@@ -1,10 +1,6 @@
 html, button, input, select, textarea { 
 	font-family: 'Source Sans Pro', sans-serif;
-<<<<<<< HEAD
 	font-size: 15px;
-=======
-	font-size: 16px;
->>>>>>> 5dd7aa895fc2e6fe97f13e68c14d8748b00cada4
 }
 
 textarea:focus, input:focus{
