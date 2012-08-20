@@ -1,9 +1,6 @@
-html {
-	font-size: 16px;
-}
-
 html, button, input, select, textarea { 
 	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
 }
 
 textarea:focus, input:focus{
@@ -56,11 +53,10 @@ ul#links {
 
 ul#links li {
 	display: inline;
-	margin-left: 10px;
+	margin-left: 15px;
 }
 
 ul#links li a {
-	text-transform: uppercase;
 	text-decoration: none;
 	color: #000;
 }
@@ -153,6 +149,12 @@ footer #bottom-links li {
 
 footer #bottom-links li a {
 	color: #b1cb37;
+}
+
+.box-shadow {
+	-moz-box-shadow: 2px 2px 6px #000; 
+  	-webkit-box-shadow: 2px 2px 6px #000; 
+  	box-shadow: 2px 2px 6px #000;
 }
 
 .clear {
