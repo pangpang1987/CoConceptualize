@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+<title>Regist - CoConceptualize</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/register.css">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/smoothness/jquery-ui-1.8.22.custom.css">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header>
+	<div id="logo">
+		coconceptualize
+	</div>
+	<ul id="links">
+		<li><a href="">Home</a></li>
+		<li><a href="">New to us?</a></li>
+	</ul>
+	<div class="clear"> </div>
+</header>
+
+<div id="main">
+	<p id="topic">Register</p>
+	<form id="register">
+		<p>User Name:<input type="text" name="name" id="name" placeholder=""/>
+			<span id="info_name" class="info">At least 5 characters</span>
+			<span class="empty">Please enter your UserName</span>
+			<span id='error_name' class="error">Username must:start with a letter and only use letters,numbers.</span>
+		</p>
+		<p>Email:<input type="email" name="email" id="email" placeholder=""/>
+			<span class="info">e.g.   abc@coconceptualize.com</span>
+			<span class="empty">Please enter your Email</span>
+			<span id='error_email' class="error">Please check your email address.</span>
+		</p>
+		<p>Password:<input type="password" name="password" id="password" placeholder="" />
+			<span id="info_pwd" class="info">At least 5 characters</span>
+			<span class="empty">Please enter your Password</span>
+			<span id='error_pwd' class="error">The password should not be the same as your username.</span>
+		</p>
+		<p>Confirm Password:<input type="password" name="password_confirm" id="password_confirm" placeholder="" /></p>
+			<span class="info">Repeat your password</span>
+			<span class="empty">Please repeat your password</span>
+			<span id='error_pwd_c' class="error">The password is different.</span>
+		<p>First Name:<input type="text" name="fname" id="fname" placeholder="password"/>
+			<span class="empty">Please enter your First Name</span>
+		</p>
+		<p>Last Name:<input type="text" name="lname" id="lname" placeholder="Last Name"/>
+			<span class="empty">Please enter your Last Name</span>
+		</p>
+		<button id="join">Join Us!</button>
+		<div class="clear"> </div>
+	</form>
+</div>
+
+<footer>
+	<p>Copyright &copy; Awesome guys in CITS4230</p>
+	<ul id="bottom-links">
+		<li><a href="#">About us</a></li>
+		<li>//</li>
+		<li><a href="#">Contact us</a></li>
+		<li>//</li>
+		<li><a href="#">Site map</a></li>
+	</ul>
+	<div class="clear"> </div>
+</footer>
+
+<script src="js/jquery-1.8.0.min.js"></script>
+<script src="js/jquery-ui-1.8.22.custom.min.js"></script>
+<script src="js/register.js"></script>
+<body>
+</html>
