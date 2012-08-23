@@ -78,9 +78,12 @@ function isEmail(strEmail) {
 	return false;
 }
 function isName(strName){
-	if (strName.search(/^[A-z][A-z0-9]*$/g) != -1)
+	if (strName.search(/^[A-Za-z][A-Za-z0-9]{4,17}$/) != -1 && isLong(strName))
 	return true;
-	else
+	else{
+		if(!isLong(strName))
+		return true;
+	}
 	return false;
 }
 
@@ -92,11 +95,11 @@ function isPassword(str){
 }
 
 var minlength = 5;
-
+var maxlength = 18;
 function isLong(str){
 	if(str.length == 0)
 	return true;
-	if(str.length < minlength || str.length > 50)
+	if(str.length < minlength || str.length > maxlength)
 	return false;
 	return true;
 }
