@@ -156,6 +156,32 @@ button#loginButton {
 	color: #bdd72f;
 }
 
+.error {
+	display: none;
+	color: white;
+	font-size: 12px;
+	text-align: left;
+	margin-left: 40%;
+	border: 1px solid white;
+	padding: 4px;
+}
+
+.info{
+	display: none;
+	color: white;
+	font-size: 12px;
+	text-align: left;
+	margin-left: 40%;
+}
+
+.empty{
+	display:none;
+	color:#FE57A1;
+	font-size:12px;
+	text-align: left;
+	margin-left: 40%;
+}
+
 footer {
 	position: absolute;
 	bottom: 0;
