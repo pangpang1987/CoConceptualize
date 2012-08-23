@@ -126,6 +126,36 @@ button#loginButton {
 	font-weight: bold;
 }
 
+#register{
+	margin-left:10%;
+	width:70%;
+	text-align: right
+}
+
+#register p{
+	font-size: 18px;
+	color: #828282;
+
+}
+
+#register input{
+	width: 60%;
+	font-size: 18px;
+	margin-top: 4px;
+	margin-left: 20px;
+	color: #9a9a9a;
+	border: 0;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-moz-border-radius: 4px;
+}
+
+#register input:focus {
+	background: #595959;
+	color: #bdd72f;
+}
+
 footer {
 	position: absolute;
 	bottom: 0;
