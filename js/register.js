@@ -1,5 +1,20 @@
 $(function(){
 	$("button").button();
+	
+	$("#join").click(function(){
+		warning = false;
+		$("input").blur();
+		if(warning){
+			$("#register_error").css("display","block");
+			$("#register").attr("onsubmit",false);
+		}
+		else{
+			$("#register_error").css("display","none");
+			$("#register").attr("onsubmit",false);
+			alert("send info");
+			window.location.href="index.html";
+		}
+	})
 })
 
 
@@ -12,6 +27,7 @@ $(function(){
 	
 	$("input").blur(function(){
 		if(!$(this).val()){
+			warning = true;
 			$(this).parent().children(".empty").css("display","block");	
 		}
 		$(this).parent().children(".info").css("display","none");
@@ -31,6 +47,12 @@ $(function(){
 		if(!isLong($(this).val())){
 			$("#info_name").css("display","block");
 			$("#info_name").css("color","#FE57A1");
+		}
+		if(isNameOccupied($(this).val())){
+			$("#occupied_name").css("display","block");
+		}
+		else{
+			$("#occupied_name").css("display","none");
 		}
 	})
 	
@@ -71,35 +93,62 @@ $(function(){
 
 
 function isEmail(strEmail) {
-	if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1)
 	
-	return true;
-	else
-	return false;
+	if(!strEmail.length)
+		return true;
+	if (strEmail.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) != -1)
+		return true;
+	else{
+		warning = true;
+		return false;
+	}
 }
 function isName(strName){
+	
+	if (!strName.length)
+		return true;
 	if (strName.search(/^[A-Za-z][A-Za-z0-9]{4,17}$/) != -1 && isLong(strName))
-	return true;
+		return true;
 	else{
 		if(!isLong(strName))
 		return true;
 	}
+	warning = true;
 	return false;
 }
 
+function isNameOccupied(strName){
+	if(strName == "a1234"){
+		warning = true;
+		return true;
+	}
+	
+	return false;
+}
 function isPassword(str){
 	if(str != $("#name").val() || str.length == 0)
-	return true;
-	else
+		return true;
+	warning = true;
 	return false;
 }
+function isPasswordOccupied(str){
+	if(str != $("#password").val() || str.length == 0)
+		return true;
+	else{
+		warning = true;
+		return false;
+	}
+}
 
+var warning = false;
 var minlength = 5;
 var maxlength = 18;
 function isLong(str){
-	if(str.length == 0)
-	return true;
-	if(str.length < minlength || str.length > maxlength)
-	return false;
+	if(!str.length)
+		return true;
+	if(str.length < minlength || str.length > maxlength){
+		warning = true;
+		return false;
+	}
 	return true;
 }
