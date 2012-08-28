@@ -17,14 +17,14 @@
 		coconceptualize
 	</div>
 	<ul id="links">
-		<li><a href="">Home</a></li>
+		<li><a href="index.html">Home</a></li>
 		<li><a href="">New to us?</a></li>
 	</ul>
 	<div class="clear"> </div>
 </header>
 
 <div id="main">
-	<p id="topic">Register</p>
+	<p id="register_error"><b>Something is wrong</b><br /> double-check and try again</p>
 	<form id="register">
 		<p>User Name:<input type="text" name="name" id="name" placeholder=""/>
 			<span id="info_name" class="info">5 - 18 characters</span>
@@ -41,19 +41,24 @@
 			<span class="empty">Please enter your Password</span>
 			<span id='error_pwd' class="error">The password should not be the same as your username.</span>
 		</p>
-		<p>Confirm Password:<input type="password" name="password_confirm" id="password_confirm" placeholder="" /></p>
+		<p>Confirm Password:<input type="password" name="password_confirm" id="password_confirm" placeholder="" />
 			<span class="info">Repeat your password</span>
 			<span class="empty">Please repeat your password</span>
 			<span id='error_pwd_c' class="error">The password is different.</span>
-		<p>First Name:<input type="text" name="fname" id="fname" placeholder="password"/>
+		</p>
+		<p>First Name:<input type="text" name="fname" id="fname" placeholder=""/>
 			<span class="empty">Please enter your First Name</span>
 		</p>
-		<p>Last Name:<input type="text" name="lname" id="lname" placeholder="Last Name"/>
+		<p>Last Name:<input type="text" name="lname" id="lname" placeholder=""/>
 			<span class="empty">Please enter your Last Name</span>
 		</p>
-		<button id="join">Join Us!</button>
+		</form>
+		<div id="register_join">
+			<button id="join">Join Us!</button>
+			<a href="index.html">Cancel</a>
+		</div>
 		<div class="clear"> </div>
-	</form>
+	
 </div>
 
 <footer>

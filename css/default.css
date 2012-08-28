@@ -128,19 +128,19 @@ button#loginButton {
 
 #register{
 	margin-left:10%;
-	width:70%;
+	width:80%;
 	text-align: right
 }
 
 #register p{
-	font-size: 18px;
+	font-size: 20px;
 	color: #828282;
 
 }
 
 #register input{
 	width: 60%;
-	font-size: 18px;
+	font-size: 20px;
 	margin-top: 4px;
 	margin-left: 20px;
 	color: #9a9a9a;
@@ -156,13 +156,50 @@ button#loginButton {
 	color: #bdd72f;
 }
 
+#register a{
+	color: #828282;
+	margin-left: 4px;
+}
+
+#register_error{
+	width:50%;
+	margin: 0 auto;
+	font-size:16px;
+	text-align:center;
+	color:#FFFFFF;
+	background-color: #FE57A1;
+	border: 0;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-moz-border-radius: 4px;
+	display: none;
+}
+#main b{
+	font-size: 24px;
+}
+
+#register_join{
+	text-align: right;
+	margin-right: 10%;
+}
+
+#join{
+	float:none;
+}
+
+#register_join a{
+	color: #828282;
+}
+
 .error {
 	display: none;
-	color: white;
-	font-size: 12px;
+	color: #FE57A1;
+	font-size: 14px;
 	text-align: left;
 	margin-left: 40%;
-	border: 1px solid white;
+	margin-top:2px;
+	border: 1px solid #FE57A1;
 	padding: 4px;
 }
 
