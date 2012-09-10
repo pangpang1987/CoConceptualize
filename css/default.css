@@ -1,5 +1,5 @@
 html, button, input, select, textarea { 
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 }
 
@@ -26,7 +26,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 body {
 	background: #6188ad url(../images/bg.gif) repeat;
 	margin: 0 auto;
-	width: 60%;
+	width: 80%;
 	font-size: 1em;
 	line-height: 1.4;
 	color: #2c2c2c;
@@ -70,20 +70,16 @@ ul#links li a:hover {
 }
 
 #main p#intro {
+	width: 70%;
+	margin: 0 auto;
 	font-size: 18px;
 	color: #828282;
 	text-align: center;
 	font-style: italic;
 }
 
-::-webkit-input-placeholder {
-   color: #bfbfbf;
-   text-transform: uppercase;
-}
-
-:-moz-placeholder {  
-   color: #bfbfbf;
-   text-transform: uppercase;
+#main b{
+	font-size: 24px;
 }
 
 #login {
@@ -126,29 +122,51 @@ button#loginButton {
 	font-weight: bold;
 }
 
-#register{
-	margin-left:10%;
-	width:80%;
-	text-align: right
+#register_error{
+	background-color: #ffafaf;
+	width: 300px;
+	margin: 0 auto;
+	margin-top: -40px;
+	font-size: 14px;
+	color: #b41919;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #da2525;
+	display: none;
 }
 
-#register p{
-	font-size: 20px;
-	color: #828282;
-
+#register {
+	width: 70%;
+	margin: 0 auto;
 }
 
-#register input{
-	width: 60%;
+#register #fields {
+	float: left;
+	text-align: right;
+	width: 65%;
+}
+#register #register_join{
+	float: left;
+	width: 30%;
+	margin-top: -15px;
+}
+
+#register #fields div {
+	margin-bottom: 15px;
+}
+
+#register input {
+	width: 300px;
+	height: 40px;
 	font-size: 20px;
-	margin-top: 4px;
-	margin-left: 20px;
 	color: #9a9a9a;
 	border: 0;
 	border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-khtml-border-radius: 4px;
 	-moz-border-radius: 4px;
+	padding-left: 10px;
 }
 
 #register input:focus {
@@ -156,73 +174,67 @@ button#loginButton {
 	color: #bdd72f;
 }
 
-#register a{
-	color: #828282;
-	margin-left: 4px;
+#concept-wrapper {
+	width: 100%;
 }
 
-#register_error{
-	width:50%;
-	margin: 0 auto;
-	font-size:16px;
-	text-align:center;
-	color:#FFFFFF;
-	background-color: #FE57A1;
-	border: 0;
-	border-radius: 4px;
-	-webkit-border-radius: 4px;
-	-khtml-border-radius: 4px;
-	-moz-border-radius: 4px;
-	display: none;
-}
-#main b{
-	font-size: 24px;
-}
-
-#register_join{
-	text-align: right;
-	margin-right: 10%;
+#concept-listing-heading {
+	background-image: linear-gradient(bottom, #EBEBEB 9%, #FFFFFF 100%);
+	background-image: -o-linear-gradient(bottom, #EBEBEB 9%, #FFFFFF 100%);
+	background-image: -moz-linear-gradient(bottom, #EBEBEB 9%, #FFFFFF 100%);
+	background-image: -webkit-linear-gradient(bottom, #EBEBEB 9%, #FFFFFF 100%);
+	background-image: -ms-linear-gradient(bottom, #EBEBEB 9%, #FFFFFF 100%);
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.09, #EBEBEB),
+		color-stop(1, #FFFFFF)
+	);
+	padding: 10px;
+	text-transform: lowercase;
+	font-weight: bold;
 }
 
-#join{
-	float:none;
+#concept-listing {
+	background-color: #f6f6f6;
+	padding: 10px;
 }
 
-#register_join a{
-	color: #828282;
+#concept-listing section {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #e7e7e7;
 }
 
-.error {
-	display: none;
-	color: #FE57A1;
-	font-size: 14px;
-	text-align: left;
-	margin-left: 40%;
-	margin-top:2px;
-	border: 1px solid #FE57A1;
-	padding: 4px;
+#concept-listing-heading .num, #concept-listing .num {
+	float: left;
+	width: 5%;
 }
 
-.info{
-	display: none;
-	color: white;
-	font-size: 12px;
-	text-align: left;
-	margin-left: 40%;
+#concept-listing-heading .left, #concept-listing .left {
+	float: left;
+	width: 45%;
 }
 
-.empty{
-	display:none;
-	color:#FE57A1;
-	font-size:12px;
-	text-align: left;
-	margin-left: 40%;
+#concept-listing .left a {
+	text-decoration: none;
+	color: #8bc410;
 }
+
+#concept-listing-heading .right, #concept-listing .right {
+	float: right;
+	width: 45%;
+}
+
+/*=======================================
+		FOOTER
+=======================================*/
 
 footer {
 	position: absolute;
 	bottom: 0;
-	width: 60%;
+	width: 80%;
 	border-top: 1px solid #b1cb37;
 	color: #fff;
 }
@@ -244,10 +256,22 @@ footer #bottom-links li a {
 	color: #b1cb37;
 }
 
+/*=======================================
+		OTHER ELEMENT STYLING
+=======================================*/
+
 .box-shadow {
 	-moz-box-shadow: 2px 2px 6px #000; 
   	-webkit-box-shadow: 2px 2px 6px #000; 
   	box-shadow: 2px 2px 6px #000;
+}
+
+::-webkit-input-placeholder {
+   color: #bfbfbf;
+}
+
+:-moz-placeholder {  
+   color: #bfbfbf;
 }
 
 .clear {
