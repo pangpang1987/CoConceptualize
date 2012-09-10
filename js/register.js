@@ -1,96 +1,50 @@
 $(function(){
 	$("button").button();
-	
+
+	/*	REGISTER ERROR DISPLAY */
 	$("#join").click(function(){
-		warning = false;
-		$("input").blur();
-		if(warning){
-			$("#register_error").css("display","block");
-			$("#register").attr("onsubmit",false);
+		if ($("#username").val() == "" || $("#email").val() == "" || $("#password").val() == "" || $("#password_confirm").val() == "" || $("#fname").val() == "" || $("#lname").val() == "") {
+			$("#register_error").html("Empty field detected");
+			$("#register_error").fadeIn();
 		}
-		else{
-			$("#register_error").css("display","none");
-			$("#register").attr("onsubmit",false);
-			alert("send info");
-			window.location.href="index.html";
+		else if(!isName($("#username").val())){
+			$("#register_error").html("Username is invalid");
+			$("#register_error").fadeIn();
 		}
-	})
-})
+		else if(!isLong($("#username").val())){
+			$("#register_error").html("Username should be at least 5 letters long");
+			$("#register_error").fadeIn();
+		}
+		else if(isNameOccupied($("#username").val())){
+			$("#register_error").html("This username has been registered");
+			$("#register_error").fadeIn();
+		}
+		else if(!isEmail($("#email").val())){
+			$("#register_error").html("Invalid email address");
+			$("#register_error").fadeIn();
+		}
+		else if(!isPassword($("#password").val())){
+			$("#register_error").html("Password is invalid");
+			$("#register_error").fadeIn();
+		}
+		else if(!isLong($("#password").val())){
+			$("#register_error").html("Password is not long enough (8-12 characters)");
+			$("#register_error").fadeIn();
+		}
+		else if($("#password_confirm").val() != $("#password").val()){
+			$("#register_error").html("Password confirmation is wrong");
+			$("#register_error").fadeIn();
+		}
+		else {
+			$("#register_error").html("Processing");
+			$("#register_error").css("background-color", "#b7f691");
+			$("#register_error").css("color", "#46bb00");
+			$("#register_error").css("border", "1px solid #58d110");
+			$("#register_error").fadeIn("slow").delay("400").fadeOut();
+		}
+	});
 
-
-$(function(){
-	$("input").focus(function(){
-		$(this).parent().children(".info").css("display","block");
-		$(this).parent().children(".info").css("color","white");
-		$(this).parent().children(".empty").css("display","none");	
-	})
-	
-	$("input").blur(function(){
-		if(!$(this).val()){
-			warning = true;
-			$(this).parent().children(".empty").css("display","block");	
-		}
-		$(this).parent().children(".info").css("display","none");
-	})
-})
-
-$(function(){
-	
-	$("#name").blur(function(){
-		if(!isName($(this).val())){
-			$("#error_name").css("display","block");
-		}
-		else{
-			$("#error_name").css("display","none");
-		}
-		
-		if(!isLong($(this).val())){
-			$("#info_name").css("display","block");
-			$("#info_name").css("color","#FE57A1");
-		}
-		if(isNameOccupied($(this).val())){
-			$("#occupied_name").css("display","block");
-		}
-		else{
-			$("#occupied_name").css("display","none");
-		}
-	})
-	
-	$("#email").blur(function(){
-		if(!isEmail($("#email").val())){
-			$("#error_email").css("display","block");
-		}
-		else{
-			$("#error_email").css("display","none");
-		}
-			
-		
-	})	
-	
-	$("#password").blur(function(){
-		if(!isPassword($(this).val())){
-			$("#error_pwd").css("display","block");
-		}
-		else{
-			$("#error_pwd").css("display","none");
-		}
-		if(!isLong($(this).val())){
-			$("#info_pwd").css("display","block");
-			$("#info_pwd").css("color","#FE57A1");
-		}
-	})
-	
-	$("#password_confirm").blur(function(){
-		if($(this).val() != $("#password").val()){
-			$("#error_pwd_c").css("display","block");
-		}
-		else{$(this).css("background-color","white")
-			$("#error_pwd_c").css("display","none");
-		}
-	})
-})
-
-
+});
 
 function isEmail(strEmail) {
 	
@@ -104,7 +58,7 @@ function isEmail(strEmail) {
 	}
 }
 function isName(strName){
-	
+	//alert(strName);
 	if (!strName.length)
 		return true;
 	if (strName.search(/^[A-Za-z][A-Za-z0-9]{4,17}$/) != -1 && isLong(strName))
