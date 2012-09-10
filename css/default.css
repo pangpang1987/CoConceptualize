@@ -1,5 +1,5 @@
 html, button, input, select, textarea { 
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 }
 
@@ -26,7 +26,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
 body {
 	background: #6188ad url(../images/bg.gif) repeat;
 	margin: 0 auto;
-	width: 60%;
+	width: 80%;
 	font-size: 1em;
 	line-height: 1.4;
 	color: #2c2c2c;
@@ -70,6 +70,8 @@ ul#links li a:hover {
 }
 
 #main p#intro {
+	width: 70%;
+	margin: 0 auto;
 	font-size: 18px;
 	color: #828282;
 	text-align: center;
@@ -141,7 +143,8 @@ button#loginButton {
 
 #register #fields {
 	float: left;
-	width: 60%;
+	text-align: right;
+	width: 65%;
 }
 #register #register_join{
 	float: left;
@@ -231,7 +234,7 @@ button#loginButton {
 footer {
 	position: absolute;
 	bottom: 0;
-	width: 60%;
+	width: 80%;
 	border-top: 1px solid #b1cb37;
 	color: #fff;
 }
